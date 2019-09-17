@@ -202,4 +202,13 @@ RobotHardware::get_registered_operation_mode_handles()
   return registered_operation_mode_handles_;
 }
 
+std::string
+RobotHardware::get_robot_name() const{
+  return robot_name_;
+}
+
+void RobotHardware::set_robot_name(const std::string& name){
+  robot_name_ = name;
+}
+
 }  // namespace hardware_interface

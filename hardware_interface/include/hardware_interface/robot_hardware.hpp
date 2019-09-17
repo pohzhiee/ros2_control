@@ -82,10 +82,14 @@ public:
   std::vector<OperationModeHandle *>
   get_registered_operation_mode_handles();
 
+  std::string get_robot_name() const;
+  void set_robot_name(const std::string& name);
+
 private:
   std::vector<const JointStateHandle *> registered_joint_state_handles_;
   std::vector<JointCommandHandle *> registered_joint_command_handles_;
   std::vector<OperationModeHandle *> registered_operation_mode_handles_;
+  std::string robot_name_;
 };
 
 }  // namespace hardware_interface
